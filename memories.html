@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#faf5f7">
+    <title>الذكريات - لحظات لا تُنسى</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:wght@400;700&family=Playfair+Display:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preload" as="image" href="https://i.ibb.co/JRf44vMB/file-00000000d208820a833056c330ff0277.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/twV4dRsw/file-0000000004308246820734a6349eb178.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/KcWphCtk/file-000000006e2481f49260786d8ebf1518.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/93SM22Br/file-0000000060dc8246bd64e12130ccef2e.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/YFKxHV4Y/file-00000000c19c81f4ad564bee194e8a58.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/4R25zqwk/file-00000000cf3c81f4b0cb75ebc7f5d036.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/BkyjT0s/file-00000000792c81f4a764b842fcec7b8b.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/F4kkRprZ/file-00000000f8a0824695ad36d0ee1e6930.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/7tNY4Rk2/file-00000000d5a0820aab68fc7df187adfb.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/yngGfCNz/file-00000000462481f49dbbb58bf3a8f51a.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/Tpx19L8/file-000000009e048243bffb4cb4acd308c8.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/vN4WYHp/file-00000000f4e0820aa4f46e38d2474753.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/tMw61cRx/file-0000000020248246b916978334158865.png">
+    <link rel="preload" as="image" href="https://i.ibb.co/G4CRJQ7H/file-00000000ba1c81f4a08e8d4bc168a108.png">
+    
+    <link rel="preload" as="video" href="https://a.top4top.io/m_388287twp1.mp4">
+
+    <link rel="stylesheet" href="css/memories.css">
+</head>
+<body>
+    <div class="background-particles" id="particles"></div>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
+
+    <div class="floating-header">
+        <a href="index.html" class="header-btn back-btn" aria-label="رجوع"><i class="fas fa-arrow-right"></i></a>
+        <button class="header-btn" onclick="showNotifications()" aria-label="الإشعارات"><i class="fas fa-bell"></i><span class="notification-badge">3</span></button>
+    </div>
+
+    <div class="modal-overlay" id="notificationsModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeNotifications()"><i class="fas fa-times"></i></button>
+            <h3 style="text-align:center;margin-bottom:1rem;">الإشعارات</h3>
+            <div style="display:flex;flex-direction:column;gap:0.8rem;">
+                <div style="padding:1rem;background:var(--soft-pink);border-radius:1rem;text-align:center;">رسالة جديدة تنتظرك!</div>
+                <div style="padding:1rem;background:var(--soft-blue);border-radius:1rem;text-align:center;">أنتِ شخص رائع!</div>
+                <div style="padding:1rem;background:var(--soft-mint);border-radius:1rem;text-align:center;">افتحي المفاجأة النهائية</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-container" id="appContainer">
+        <div class="page active" id="page1">
+            <div class="section-title">
+                <h2>لحظات لا تُنسى</h2>
+                <p>كل لحظة معكِ قصة حب تُروى</p>
+            </div>
+
+            <div class="video-section">
+                <h3><i class="fas fa-film"></i> فيلم ذكرياتنا</h3>
+                <div class="video-container">
+                    <video controls autoplay loop playsinline controlsList="nodownload" disablePictureInPicture preload="auto" style="width:100%;height:100%;object-fit:cover;">
+                        <source src="https://a.top4top.io/m_388287twp1.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو
+                    </video>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3 style="font-size:1.5rem;">💕 لحظاتنا الجميلة</h3>
+            </div>
+            <div class="memories-gallery">
+                <div class="memory-card-v2" onclick="revealMemoryV2(this)">
+                    <div class="memory-image"><img src="https://i.ibb.co/JRf44vMB/file-00000000d208820a833056c330ff0277.png" alt="لحظة 1" loading="eager"></div>
+                    <div class="memory-content"><h3>قهوة المساء</h3><p>تلك الجلسة الهادئة التي تحدثنا فيها عن الأحلام والنجوم..</p></div>
+                </div>
+                <div class="memory-card-v2" onclick="revealMemoryV2(this)">
+                    <div class="memory-image"><img src="https://i.ibb.co/twV4dRsw/file-0000000004308246820734a6349eb178.png" alt="لحظة 2" loading="eager"></div>
+                    <div class="memory-content"><h3>أغنية الطريق</h3><p>غنّينا معاً بصوتٍ عالٍ.. كان الأجمل</p></div>
+                </div>
+                <div class="memory-card-v2" onclick="revealMemoryV2(this)">
+                    <div class="memory-image"><img src="https://i.ibb.co/KcWphCtk/file-000000006e2481f49260786d8ebf1518.png" alt="لحظة 3" loading="eager"></div>
+                    <div class="memory-content"><h3>مطر مفاجئ</h3><p>ضحكنا تحت المطر كأننا أطفال</p></div>
+                </div>
+                <div class="memory-card-v2" onclick="revealMemoryV2(this)">
+                    <div class="memory-image"><img src="https://i.ibb.co/93SM22Br/file-0000000060dc8246bd64e12130ccef2e.png" alt="لحظة 4" loading="eager"></div>
+                    <div class="memory-content"><h3>كتاب مشترك</h3><p>قرأنا وتبادلنا اقتباسات</p></div>
+                </div>
+                <div class="memory-card-v2" onclick="revealMemoryV2(this)">
+                    <div class="memory-image"><img src="https://i.ibb.co/YFKxHV4Y/file-00000000c19c81f4ad564bee194e8a58.png" alt="لحظة 5" loading="eager"></div>
+                    <div class="memory-content"><h3>غروب لا يُنسى</h3><p>شاهدنا الشمس تغيب معاً</p></div>
+                </div>
+                <div class="memory-card-v2" onclick="revealMemoryV2(this)">
+                    <div class="memory-image"><img src="https://i.ibb.co/4R25zqwk/file-00000000cf3c81f4b0cb75ebc7f5d036.png" alt="لحظة 6" loading="eager"></div>
+                    <div class="memory-content"><h3>حلوى مفاجئة</h3><p>ألذ حلويات صنعتها بنفسك</p></div>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3 style="font-size:1.5rem;">🌟 لمسات سحرية</h3>
+            </div>
+            <div class="photo-gallery">
+                <div class="photo-item" onclick="revealPhoto(this)">
+                    <img src="https://i.ibb.co/BkyjT0s/file-00000000792c81f4a764b842fcec7b8b.png" alt="ابتسامتكِ" loading="eager">
+                    <span>ابتسامتكِ</span>
+                </div>
+                <div class="photo-item" onclick="revealPhoto(this)">
+                    <img src="https://i.ibb.co/F4kkRprZ/file-00000000f8a0824695ad36d0ee1e6930.png" alt="ضحكتكِ" loading="eager">
+                    <span>ضحكتكِ</span>
+                </div>
+                <div class="photo-item" onclick="revealPhoto(this)">
+                    <img src="https://i.ibb.co/7tNY4Rk2/file-00000000d5a0820aab68fc7df187adfb.png" alt="نظراتكِ" loading="eager">
+                    <span>نظراتكِ</span>
+                </div>
+                <div class="photo-item" onclick="revealPhoto(this)">
+                    <img src="https://i.ibb.co/yngGfCNz/file-00000000462481f49dbbb58bf3a8f51a.png" alt="همساتكِ" loading="eager">
+                    <span>همساتكِ</span>
+                </div>
+                <div class="photo-item" onclick="revealPhoto(this)">
+                    <img src="https://i.ibb.co/Tpx19L8/file-000000009e048243bffb4cb4acd308c8.png" alt="حنانكِ" loading="eager">
+                    <span>حنانكِ</span>
+                </div>
+                <div class="photo-item" onclick="revealPhoto(this)">
+                    <img src="https://i.ibb.co/vN4WYHp/file-00000000f4e0820aa4f46e38d2474753.png" alt="دفئكِ" loading="eager">
+                    <span>دفئكِ</span>
+                </div>
+                <div class="photo-item" onclick="revealPhoto(this)">
+                    <img src="https://i.ibb.co/tMw61cRx/file-0000000020248246b916978334158865.png" alt="قلبكِ" loading="eager">
+                    <span>قلبكِ</span>
+                </div>
+                <div class="photo-item" onclick="revealPhoto(this)">
+                    <img src="https://i.ibb.co/G4CRJQ7H/file-00000000ba1c81f4a08e8d4bc168a108.png" alt="روحكِ" loading="eager">
+                    <span>روحكِ</span>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-right"></i> السابق</a>
+                <a href="quiz.html" class="btn btn-primary">التالي <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+        <a href="memories.html" class="nav-btn active"><i class="fas fa-heart"></i></a>
+        <a href="quiz.html" class="nav-btn"><i class="fas fa-gamepad"></i></a>
+        <a href="letter.html" class="nav-btn"><i class="fas fa-envelope"></i></a>
+        <a href="finale.html" class="nav-btn"><i class="fas fa-gift"></i></a>
+    </div>
+
+    <script src="js/memories.js"></script>
+</body>
+</html>

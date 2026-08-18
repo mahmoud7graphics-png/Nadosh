@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#faf5f7">
+    <title>المفاجأة النهائية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:wght@400;700&family=Playfair+Display:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/finale.css">
+</head>
+<body>
+    <div class="background-particles" id="particles"></div>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
+
+    <div class="floating-header">
+        <a href="letter.html" class="header-btn back-btn" aria-label="رجوع"><i class="fas fa-arrow-right"></i></a>
+        <button class="header-btn" onclick="showNotifications()" aria-label="الإشعارات"><i class="fas fa-bell"></i><span class="notification-badge">3</span></button>
+    </div>
+
+    <div class="modal-overlay" id="notificationsModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeNotifications()"><i class="fas fa-times"></i></button>
+            <h3 style="text-align:center;margin-bottom:1rem;">الإشعارات</h3>
+            <div style="display:flex;flex-direction:column;gap:0.8rem;">
+                <div style="padding:1rem;background:var(--soft-pink);border-radius:1rem;text-align:center;">رسالة جديدة تنتظرك!</div>
+                <div style="padding:1rem;background:var(--soft-blue);border-radius:1rem;text-align:center;">أنتِ شخص رائع!</div>
+                <div style="padding:1rem;background:var(--soft-mint);border-radius:1rem;text-align:center;">افتحي المفاجأة النهائية</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="love-dialog-overlay" id="loveDialog">
+        <div class="love-dialog">
+            <button class="love-dialog-close" onclick="closeLoveDialog()"><i class="fas fa-times"></i></button>
+            <div class="love-dialog-decoration">💝</div>
+            <div class="love-dialog-title">رسالة من القلب</div>
+            <div class="love-dialog-divider"></div>
+            <div class="love-dialog-message">
+                إلى أجمل ما في حياتي،
+
+                كل لحظة جمعتنا كانت <span class="highlight">هدية من السماء</span>،
+                وكل ابتسامة منك <span class="highlight">نور يضيء قلبي</span>.
+
+                أنتِ <span class="highlight">الحياة نفسها</span> بكل معانيها.
+
+                <span class="highlight">أحبكِ اليوم وغداً وإلى الأبد</span>
+            </div>
+            <div class="love-dialog-signature">— من قلب يحبكِ —</div>
+            <button class="love-dialog-btn" onclick="closeLoveDialog()">أحبكِ أيضاً 💖</button>
+        </div>
+    </div>
+
+    <div class="app-container" id="appContainer">
+        <div class="page active" id="page1">
+            <div class="finale-hero">
+                <div class="hero-glow"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>لحظة مميزة جداً</span>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h1 class="hero-title">مفاجأة <span>خاصة</span> لأجمل قلب</h1>
+                    <p class="hero-subtitle">جهزت لكِ شيئاً من قلبي.. اضغطي على الهدية</p>
+                </div>
+            </div>
+
+            <div class="gift-container" onclick="openLoveDialog()">
+                <div class="gift-box">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body">
+                        <div class="gift-ribbon"></div>
+                    </div>
+                    <div class="gift-glow"></div>
+                </div>
+                <div class="gift-text">اضغطي لفتح الهدية</div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💖</div>
+                    <div class="feature-label">حب لا ينتهي</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <div class="feature-label">لحظات سحرية</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌹</div>
+                    <div class="feature-label">ورد لأجلكِ</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎵</div>
+                    <div class="feature-label">ألحان حب</div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="openLoveDialog()">
+                    <i class="fas fa-gift"></i> افتحي المفاجأة
+                </button>
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-redo"></i> العودة للبداية
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+        <a href="memories.html" class="nav-btn"><i class="fas fa-heart"></i></a>
+        <a href="quiz.html" class="nav-btn"><i class="fas fa-gamepad"></i></a>
+        <a href="letter.html" class="nav-btn"><i class="fas fa-envelope"></i></a>
+        <a href="finale.html" class="nav-btn active"><i class="fas fa-gift"></i></a>
+    </div>
+
+    <script src="js/finale.js"></script>
+</body>
+</html>

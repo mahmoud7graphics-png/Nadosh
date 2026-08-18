@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#faf5f7">
+    <title>رحلة مخصصة لكِ - تجربة استثنائية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:wght@400;700&family=Playfair+Display:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="background-particles" id="particles"></div>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
+
+    <div class="floating-header">
+        <button class="header-btn" onclick="showNotifications()" aria-label="الإشعارات"><i class="fas fa-bell"></i><span class="notification-badge">3</span></button>
+    </div>
+
+    <div class="modal-overlay" id="notificationsModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeNotifications()"><i class="fas fa-times"></i></button>
+            <h3 style="text-align:center;margin-bottom:1rem;">الإشعارات</h3>
+            <div style="display:flex;flex-direction:column;gap:0.8rem;">
+                <div style="padding:1rem;background:var(--soft-pink);border-radius:1rem;text-align:center;">رسالة جديدة تنتظرك!</div>
+                <div style="padding:1rem;background:var(--soft-blue);border-radius:1rem;text-align:center;">أنتِ شخص رائع!</div>
+                <div style="padding:1rem;background:var(--soft-mint);border-radius:1rem;text-align:center;">افتحي المفاجأة النهائية</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-container" id="appContainer">
+        <div class="page active" id="page1">
+            <div class="hero-section">
+                <div class="hero-orbit">
+                    <div class="hero-orbit-ring"></div>
+                    <div class="hero-orbit-ring"></div>
+                    <div class="hero-orbit-ring"></div>
+                    <div class="hero-icon-glow"></div>
+                    <div class="hero-icon" onclick="playGreeting()">✨</div>
+                </div>
+
+                <div class="hero-badges">
+                    <div class="hero-badge">لحظات لا تُنسى</div>
+                    <div class="hero-badge">ذكريات جميلة</div>
+                    <div class="hero-badge">حب وامتنان</div>
+                </div>
+
+                <div class="hero-title-wrapper">
+                    <div class="section-title">
+                        <h1>رحلة صغيرة مخصصة لكِ<span class="typewriter-cursor">|</span></h1>
+                        <p>خمس لحظات.. كل واحدة تحمل شيئاً من القلب</p>
+                    </div>
+                </div>
+
+                <div class="news-ticker-wrapper">
+                    <div class="news-ticker-label"><i class="fas fa-bolt"></i> آخر التحديثات</div>
+                    <div class="news-ticker">
+                        <div class="ticker-content">
+                            <div class="ticker-item">مرحباً بكِ في رحلتك الخاصة</div>
+                            <div class="ticker-item">ذكريات جميلة تنتظرك</div>
+                            <div class="ticker-item">مفاجآت رائعة</div>
+                            <div class="ticker-item">رسالة من القلب</div>
+                            <div class="ticker-item">احتفال خاص</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-features">
+                    <div class="feature-card">
+                        <i class="fas fa-camera" style="color:#d4839a;"></i>
+                        <span>ذكريات</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-gamepad" style="color:#9b7bb8;"></i>
+                        <span>اختبار</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-envelope" style="color:#7db89b;"></i>
+                        <span>رسالة</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-gift" style="color:#d4a574;"></i>
+                        <span>مفاجأة</span>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card" onclick="animateStat(this)">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">صفحات مميزة</div>
+                    </div>
+                    <div class="stat-card" onclick="animateStat(this)">
+                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-label">ذكريات جميلة</div>
+                    </div>
+                    <div class="stat-card" onclick="animateStat(this)">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">حب وامتنان</div>
+                    </div>
+                </div>
+
+                <div class="ornamental-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-icon">💖</div>
+                    <div class="divider-line"></div>
+                </div>
+
+                <div class="why-section">
+                    <div class="why-card">
+                        <div class="why-icon">🌸</div>
+                        <div class="why-title">ذكريات جميلة</div>
+                        <div class="why-text">لحظات لا تُنسى جمعتنا معاً</div>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">✨</div>
+                        <div class="why-title">مفاجآت خاصة</div>
+                        <div class="why-text">أشياء مميزة جهزتها لكِ</div>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">💌</div>
+                        <div class="why-title">رسالة من القلب</div>
+                        <div class="why-text">كلمات صادقة تخرج من القلب</div>
+                    </div>
+                </div>
+
+                <div class="hero-start-btn">
+                    <a href="memories.html" class="btn btn-primary" onclick="createRipple(event);">
+                        ابدئي الرحلة <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-btn active"><i class="fas fa-home"></i></a>
+        <a href="memories.html" class="nav-btn"><i class="fas fa-heart"></i></a>
+        <a href="quiz.html" class="nav-btn"><i class="fas fa-gamepad"></i></a>
+        <a href="letter.html" class="nav-btn"><i class="fas fa-envelope"></i></a>
+        <a href="finale.html" class="nav-btn"><i class="fas fa-gift"></i></a>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
